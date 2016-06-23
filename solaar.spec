@@ -3,7 +3,7 @@
 Summary:	Device manager for Logitech's Unifying Receiver
 Name:		solaar
 Version:	0.9.2
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://pwr.github.com/Solaar/
@@ -11,6 +11,7 @@ Url:		http://pwr.github.com/Solaar/
 Source0:	%{name}-%{version}.tar.gz
 Requires:	pyudev
 Requires:	python-gi
+Requires:	typelib(AppIndicator3)
 BuildArch:	noarch
 
 %description
