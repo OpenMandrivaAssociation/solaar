@@ -9,7 +9,8 @@ Group:		System/Kernel and hardware
 # Url:		  http://pwr.github.com/Solaar/
 Url:      https://github.com/pwr-Solaar/Solaar
 # wget https://github.com/pwr/%{oname}/archive/%{version}.tar.gz -O %{name}-%{version}.tar.gz
-Source0:	%{name}-%{version}.tar.gz
+# Source0:	%{name}-%{version}.tar.gz
+Source0:	Solaar-1.1.1.tar.gz
 Requires:	pyudev
 Requires:	python-gi
 Requires:	typelib(AppIndicator3)
@@ -49,4 +50,3 @@ python setup.py build
 python setup.py install --prefix=%{_prefix} --root=%{buildroot}
 mkdir -p %{buildroot}%{_udevrulesdir}
 cp rules.d/42-logitech-unify-permissions.rules %{buildroot}%{_udevrulesdir}
-
