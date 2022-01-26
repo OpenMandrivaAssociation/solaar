@@ -1,7 +1,7 @@
 %define	oname	Solaar
 
 Summary:	Device manager for Logitech's Unifying Receiver
-Name:		  Solaar
+Name:		Solaar
 Version:	1.1.1
 Release:	1
 License:	GPLv2+
