@@ -6,7 +6,8 @@ Version:	1.1.1
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
-Url:		http://pwr.github.com/Solaar/
+# Url:		  http://pwr.github.com/Solaar/
+Url:      https://github.com/pwr-Solaar/Solaar
 # wget https://github.com/pwr/%{oname}/archive/%{version}.tar.gz -O %{name}-%{version}.tar.gz
 Source0:	%{name}-%{version}.tar.gz
 Requires:	pyudev
