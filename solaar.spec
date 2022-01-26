@@ -8,9 +8,8 @@ License:	GPLv2+
 Group:		System/Kernel and hardware
 # Url:		  http://pwr.github.com/Solaar/
 Url:            https://github.com/pwr-Solaar/Solaar/releases
-# wget https://github.com/pwr/%{oname}/archive/%{version}.tar.gz -O %{name}-%{version}.tar.gz
-# Source0:	%{name}-%{version}.tar.gz
-Source0:	Solaar-1.1.1.tar.gz
+Source0:  https://github.com/pwr-Solaar/Solaar/archive/refs/tags/%{version}/%{oname}-%{version}.tar.gz
+
 Requires:	pyudev
 Requires:	python-gi
 Requires:	typelib(AppIndicator3)
