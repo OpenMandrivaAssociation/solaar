@@ -2,8 +2,8 @@
 
 Summary:	Device manager for Logitech's Unifying Receiver
 Name:		solaar
-Version:	0.9.2
-Release:	3
+Version:	1.1.1
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 Url:		http://pwr.github.com/Solaar/
