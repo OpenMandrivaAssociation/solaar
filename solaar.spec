@@ -27,7 +27,6 @@ each device, and also pair/unpair supported devices with the receiver.
 %files
 %doc share/README docs
 %{_bindir}/%{name}*
-%{_sysconfdir}/xdg/autostart/%{name}.desktop
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/
 %{_iconsdir}/hicolor/*/apps/%{name}.svg
