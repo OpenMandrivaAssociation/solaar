@@ -29,6 +29,7 @@ each device, and also pair/unpair supported devices with the receiver.
 %{_bindir}/%{name}*
 %{_datadir}/applications/%{name}.desktop
 %{_datadir}/%{name}/
+%{_datadir}/metainfo/io.github.pwr_solaar.solaar.metainfo.xml
 %{_iconsdir}/hicolor/*/apps/%{name}.svg
 %{python_sitelib}/hidapi/
 %{python_sitelib}/logitech_receiver/
