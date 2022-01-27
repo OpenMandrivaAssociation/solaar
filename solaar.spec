@@ -12,6 +12,7 @@ Source0:  https://github.com/pwr-Solaar/Solaar/archive/refs/tags/%{version}/%{on
 
 Requires:	pyudev
 Requires:	python-gi
+Requires:	python-psutil
 Requires:	typelib(AppIndicator3)
 BuildArch:	noarch
 
