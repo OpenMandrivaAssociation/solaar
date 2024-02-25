@@ -5,8 +5,8 @@
 
 Summary:	Device manager for Logitech's Unifying Receiver
 Name:		solaar
-Version:	1.1.1
-Release:	3
+Version:	1.1.11
+Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
 # Url:		http://pwr.github.com/Solaar/
@@ -35,10 +35,11 @@ each device, and also pair/unpair supported devices with the receiver.
 %doc share/README docs
 %{_bindir}/%{name}*
 %{_datadir}/applications/%{name}.desktop
-%{_datadir}/%{name}/
+#{_datadir}/%{name}/
 %{_datadir}/metainfo/io.github.pwr_solaar.solaar.metainfo.xml
-%{_iconsdir}/hicolor/*/apps/%{name}.svg
+%{_iconsdir}/hicolor/*/apps/%{name}*.{png,svg}
 %{python_sitelib}/hidapi/
+%{python_sitelib}/keysyms/
 %{python_sitelib}/logitech_receiver/
 %{python_sitelib}/%{name}/
 %{python_sitelib}/%{name}-%{version}-*.egg-info
