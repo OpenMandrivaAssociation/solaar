@@ -1,19 +1,25 @@
-%define	oname	Solaar
+%global	oname	Solaar
+
+# don't require because it uses Ayatana Appindicator
+%global __requires_exclude  ^typelib\\(AppIndicator3\\).*$
 
 Summary:	Device manager for Logitech's Unifying Receiver
 Name:		solaar
 Version:	1.1.1
-Release:	2
+Release:	3
 License:	GPLv2+
 Group:		System/Kernel and hardware
-# Url:		  http://pwr.github.com/Solaar/
-Url:            https://github.com/pwr-Solaar/Solaar/releases
-Source0:  https://github.com/pwr-Solaar/Solaar/archive/refs/tags/%{version}/%{oname}-%{version}.tar.gz
+# Url:		http://pwr.github.com/Solaar/
+Url:		https://github.com/pwr-Solaar/Solaar/releases
+Source0:	https://github.com/pwr-Solaar/Solaar/archive/refs/tags/%{version}/%{oname}-%{version}.tar.gz
+BuildRequires:	pkgconfig(python)
+BuildRequires:	python%{pyver}dist(pygobject)
+BuildRequires:	python%{pyver}dist(pyudev)
+BuildRequires:	python%{pyver}dist(psutil)
+BuildRequires:	python%{pyver}dist(setuptools)
 
-Requires:	pyudev
 Requires:	python-gi
-Requires:	python-psutil
-Requires:	typelib(AppIndicator3)
+
 BuildArch:	noarch
 
 %description
@@ -41,12 +47,14 @@ each device, and also pair/unpair supported devices with the receiver.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q -n %{oname}-%{version}
+%autosetup -p1 -n %{oname}-%{version}
 
 %build
-python setup.py build
+%py_build
 
 %install
-python setup.py install --prefix=%{_prefix} --root=%{buildroot}
-mkdir -p %{buildroot}%{_udevrulesdir}
-cp rules.d/42-logitech-unify-permissions.rules %{buildroot}%{_udevrulesdir}
+%py_install
+
+install -pm 0755 -d %{buildroot}%{_udevrulesdir}
+install -pm 0644 rules.d/42-logitech-unify-permissions.rules %{buildroot}%{_udevrulesdir}
+
