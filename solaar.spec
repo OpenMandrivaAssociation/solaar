@@ -5,7 +5,7 @@
 
 Summary:	Device manager for Logitech's Unifying Receiver
 Name:		solaar
-Version:	1.1.11
+Version:	1.1.14
 Release:	1
 License:	GPLv2+
 Group:		System/Kernel and hardware
@@ -42,7 +42,8 @@ each device, and also pair/unpair supported devices with the receiver.
 %{python_sitelib}/keysyms/
 %{python_sitelib}/logitech_receiver/
 %{python_sitelib}/%{name}/
-%{python_sitelib}/%{name}-%{version}-*.egg-info
+%{python_sitelib}/%{name}-*.*-info
+%{python_sitelib}/hid_parser/
 %config %{_udevrulesdir}/42-logitech-unify-permissions.rules
 
 #----------------------------------------------------------------------------
