@@ -16,7 +16,7 @@ Url:		https://github.com/pwr-Solaar/Solaar/releases
 Source0:	https://github.com/pwr-Solaar/Solaar/archive/refs/tags/%{version}/%{oname}-%{version}.tar.gz
 Patch0:		solaar-1.1.16-fix-release.patch
 
-BuildRequires:	appstream
+BuildRequires:	appstream-util
 BuildRequires:	desktop-file-utils
 BuildRequires:	gettext
 BuildRequires:	hicolor-icon-theme
