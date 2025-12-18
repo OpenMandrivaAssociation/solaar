@@ -31,6 +31,7 @@ BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	python%{pyver}dist(dbus-python)
 BuildRequires:	python%{pyver}dist(evdev) >= 1.1.2
 BuildRequires:	python%{pyver}dist(hid-parser)
+BuildRequires:	python%{pyver}dist(pip)
 BuildRequires:	python%{pyver}dist(psutil) >= 5.4.3
 BuildRequires:	python%{pyver}dist(pygobject)
 BuildRequires:	python%{pyver}dist(python-xlib) >= 0.27
@@ -38,6 +39,7 @@ BuildRequires:	python%{pyver}dist(pyudev) >= 0.13
 BuildRequires:	python%{pyver}dist(pyyaml) >= 3.12
 BuildRequires:	python%{pyver}dist(setuptools)
 BuildRequires:	python%{pyver}dist(typing-extensions)
+BuildRequires:	python%{pyver}dist(wheel)
 %if %{with tests}
 BuildRequires:	python%{pyver}dist(pytest)
 BuildRequires:	python%{pyver}dist(pytest-mock)
