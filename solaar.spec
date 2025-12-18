@@ -3,18 +3,20 @@
 # don't require because it uses Ayatana Appindicator
 %global	__requires_exclude	^typelib\\(AppIndicator3\\).*$
 
-%bcond_without tests
+%bcond tests 1
 
-Summary:	Device manager for Logitech's Unifying Receiver
 Name:		solaar
-Version:	1.1.16
+Version:	1.1.18
 Release:	1
 License:	GPL-2.0-or-later
+Summary:	Device manager for Logitech's Unifying Receiver
 Group:		System/Hardware
-# Url:		http://pwr.github.com/Solaar/
-Url:		https://github.com/pwr-Solaar/Solaar/releases
+URL:		https://github.com/pwr-Solaar/Solaar/releases
 Source0:	https://github.com/pwr-Solaar/Solaar/archive/refs/tags/%{version}/%{oname}-%{version}.tar.gz
-Patch0:		solaar-1.1.16-fix-release.patch
+# Patches for 1.1.18, should be resolved in next upstream release
+Patch0:		https://github.com/pwr-Solaar/Solaar/pull/3070/commits/f5872095e64ab51b95c72c6b0d890e36128491be.patch#/1.1.18.fix-crash-when-reading-notification-flags.patch
+Patch1:		https://github.com/pwr-Solaar/Solaar/pull/3078/commits/d92b3a68b3d9dd6452132d4ef5c665bc95c04d33.patch#/1.1.18.fix-bug-when-showing-details-about-direct-connected-device.patch
+Patch2:		https://github.com/pwr-Solaar/Solaar/pull/3082/commits/b0fc8d9f4d12f2346794704f0a1bacc107e6c78b.patch#/1.1.18.add-new-lightspeed-reciever.patch
 
 BuildRequires:	appstream
 BuildRequires:	appstream-util
@@ -111,7 +113,8 @@ rm -f %{buildroot}%{python3_sitelib}/keysyms/generate.py
 export CI=true
 export PYTHONPATH="%{buildroot}%{python_sitelib}:${PWD}"
 export GI_TYPELIB_PATH=%{_prefix}/%{_lib}/girepository-1.0
-%{__python} -m pytest -v -rs tests/
+# run pytest but skip show tests as desktop notification tests dont work in CI
+pytest -v -rs tests/ -k "not test_show"
 %endif
 
 %posttrans
