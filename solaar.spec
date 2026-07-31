@@ -6,7 +6,7 @@
 %bcond tests 1
 
 Name:		solaar
-Version:	1.1.19
+Version:	1.1.20
 Release:	1
 License:	GPL-2.0-or-later
 Summary:	Device manager for Logitech's Unifying Receiver
@@ -59,7 +59,7 @@ each device, and also pair/unpair supported devices with the receiver.
 
 
 %prep
-%autosetup -n %{oname}-%{version} -p1
+%autosetup -n Solaar-1.1.20 -p1
 
 %build
 %py_build
