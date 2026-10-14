@@ -7,7 +7,7 @@
 
 Name:		solaar
 Version:	1.1.20
-Release:	1
+Release:	2
 License:	GPL-2.0-or-later
 Summary:	Device manager for Logitech's Unifying Receiver
 Group:		System/Hardware
@@ -22,7 +22,7 @@ BuildRequires:	hicolor-icon-theme
 BuildRequires:	pkgconfig(appstream)
 BuildRequires:	pkgconfig(appstream-glib)
 BuildRequires:	pkgconfig(gtk+-3.0)
-BuildRequires:	pkgconfig(python)
+BuildRequires:	pkgconfig(python3)
 BuildRequires:	pkgconfig(pygobject-3.0)
 BuildRequires:	python%{pyver}dist(dbus-python)
 BuildRequires:	python%{pyver}dist(evdev) >= 1.1.2
